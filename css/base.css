@@ -1,0 +1,51 @@
+/* reset css 重置样式 */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    /* 针对移动端 */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    font-size: 14px;
+    color: #333;
+    font-family: sans-serif;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+input, textarea {
+    outline: none;
+    border: none;
+    resize: none;
+    -webkit-appearance: none;
+}
+
+/*common css 公用样式*/
+.f_left {
+    float: left;
+}
+.f_right {
+    float: right;
+}
+.clearfix::after {
+    content: '';
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+/* 精灵图 */
+/* ^= 属性值以此开头 *= 属性值包含 */
+[class^="icon_"], [class*=" icon_"] {
+    background: url("../images/jd-sprites.png") no-repeat;
+    background-size: 200px 200px;
+}
